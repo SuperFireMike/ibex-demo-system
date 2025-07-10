@@ -17,6 +17,14 @@ filesets:
       - rtl/fpga/top_artya7.sv
     file_type: systemVerilogSource
 
+  files_xilinx_basys3:
+    depend:
+      - lowrisc:ibex:rv_timer
+      - lowrisc:ibex:fpga_xilinx_shared
+    files:
+      - rtl/fpga/top_basys3.sv
+    file_type: systemVerilogSource
+
   files_xilinx_cw305:
     depend:
       - lowrisc:ibex:rv_timer
@@ -93,6 +101,11 @@ filesets:
   files_constraints:
     files:
       - data/pins_artya7.xdc
+    file_type: xdc
+
+  files_constraints_basys3:
+    files:
+      - data/pins_basys3.xdc
     file_type: xdc
 
   files_constraints_cw305:
@@ -252,6 +265,19 @@ targets:
       - files_xilinx_artys7
       - files_constraints_artys7
     toplevel: top_artys7
+    tools:
+      vivado:
+        part: "xc7s50csga324-1"
+    parameters:
+      - SRAMInitFile
+      - PRIM_DEFAULT_IMPL=prim_pkg::ImplXilinx
+  synth_basys3:
+    <<: *default_target
+    default_tool: vivado
+    filesets_append:
+      - files_xilinx_basys3
+      - files_constraints_basys3
+    toplevel: top_basys3
     tools:
       vivado:
         part: "xc7s50csga324-1"
