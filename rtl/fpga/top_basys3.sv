@@ -11,7 +11,7 @@ module top_basys7 #(
   input         IO_RST_N,
   input  [ 3:0] SW,
   input  [ 3:0] BTN,
-  output [ 6:0] LED,
+  output [ 3:0] LED,
   input         UART_RX,
   output        UART_TX
 );
@@ -21,8 +21,8 @@ module top_basys7 #(
   // Instantiating the Ibex Demo System.
   ibex_demo_system #(
     .GpiWidth     ( 8            ),
-    .GpoWidth     ( 7            ),
-    .PwmWidth     ( 1           ),
+    .GpoWidth     ( 4            ),
+    .PwmWidth     ( 1            ),
     .SRAMInitFile ( SRAMInitFile )
   ) u_ibex_demo_system (
     //input
