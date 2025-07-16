@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 // This is the top level SystemVerilog file that connects the IO on the board to the Ibex Demo System.
-module top_basys7 #(
+module top_basys3 #(
   parameter SRAMInitFile = ""
 ) (
   // These inputs are defined in data/pins_artya7.xdc

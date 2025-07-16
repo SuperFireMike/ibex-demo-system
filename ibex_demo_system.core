@@ -280,7 +280,7 @@ targets:
     toplevel: top_basys3
     tools:
       vivado:
-        part: "xc7s50csga324-1"
+        part: "xc7a35tcpg236-1"
     parameters:
       - SRAMInitFile
       - PRIM_DEFAULT_IMPL=prim_pkg::ImplXilinx
