@@ -8,7 +8,7 @@ module top_basys3 #(
 ) (
   // These inputs are defined in data/pins_artya7.xdc
   input         IO_CLK,
-  input         IO_RST_N,
+  input         IO_RST,
   input  [ 3:0] SW,
   input  [ 3:0] BTN,
   output [ 3:0] LED,
@@ -46,6 +46,9 @@ module top_basys3 #(
     .td_i   (1'b0),
     .td_o   ()
   );
+
+  logic IO_RST_N;
+  assign IO_RST_N = ~IO_RST;
 
   // Generating the system clock and reset for the FPGA.
   clkgen_xil7series clkgen(

@@ -51,4 +51,5 @@ targets:
       - target_synth_artys7-25 ? (files_xilinx_bscane_tap)
       - target_synth_artys7-50 ? (files_xilinx_bscane_tap)
       - target_synth_sonata ? (files_jtag_tap)
+      - target_synth_basys3 ? (files_xilinx_bscane_tap)
       - tool_verilator ? (files_jtag_tap)
