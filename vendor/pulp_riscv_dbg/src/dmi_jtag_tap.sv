@@ -16,9 +16,6 @@
  *
  */
 
-`ifndef dmi_jtag_tap_oleee
-`define dmi_jtag_tap_oleee
-
 module dmi_jtag_tap #(
   parameter int unsigned IrLength = 5,
   // JTAG IDCODE Value
@@ -324,4 +321,3 @@ module dmi_jtag_tap #(
 
 
 endmodule : dmi_jtag_tap
-`endif
